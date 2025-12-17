@@ -1,0 +1,41 @@
+.\" Manpage for jsh
+.\" Contact docs@haerbernd.dev to correct errors or typos
+.TH man 1 "17 Dec 2025" "1.0" "jsh man page"
+.SH NAME
+jsh \- Jan SHell
+.SH SYNOPSIS
+.B jsh \fB
+[options] [command string]
+.SH COPYRIGHT
+jsh is Copyright (C) 2025 by Jan-Hendrik Schmidt
+.SH DESCRIPTION
+jsh is a custom shell that is heavily inspired by the GNU Bourne-Again SHell (bash).
+.SH OPTIONS
+.TP
+.BR \-e \fR
+Call command as a system binary even if it would be a builtin
+.SH BUILTINS
+jsh has some builtin commands that take priority over system binaries. To use a system binary with the same name as a builtin instead use the -e option.
+.TP
+.BR exit \fR
+Ends the shell.
+.TP
+.BR type " " [command] \fR 
+Outputs if the given command is builtin and if not where the executed binary is stored.
+.TP
+.BR echo " " [message] \fR 
+Prints the message to STDOUT.
+.TP
+.BR pwd \fR 
+Prints the current working directory.
+.TP
+.BR cwd \fR 
+Toggles wether the current working directory should be prepended to the command prompt.
+Default is off.
+.TP
+.BR cd " " [path] \fR
+Changes the current working directory to path, if path exists. If path starts with ~, it is replaced by $HOME (the user's home directory).
+.SH AUTHOR
+Jan-Hendrik Schmidt
+.br
+docs@haerbernd.dev
