@@ -3,5 +3,5 @@ To install the manpages move or copy the contents of the `man` directory into `/
 
 Use for example
 ```bash
-cp -r man /usr/local/man
+sudo cp -r man /usr/local/man
 ```
